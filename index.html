@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AURUM — Fine Dining</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══════ NAVBAR ══════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <a href="#home" class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="18,2 34,32 2,32" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+          <polygon points="18,10 28,28 8,28" fill="#c9a84c" opacity="0.25"/>
+          <line x1="18" y1="2" x2="18" y2="32" stroke="#c9a84c" stroke-width="0.8" opacity="0.6"/>
+        </svg>
+        <span class="logo-text">AURUM</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"    class="nav-link active">Home</a></li>
+        <li><a href="#menu"    class="nav-link">Menu</a></li>
+        <li><a href="#about"   class="nav-link">About</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-reserve-li">
+          <a href="https://wa.me/9149461230?text=Hello%2C%20I'd%20like%20to%20reserve%20a%20table%20at%20AURUM." target="_blank">
+            <i class="fab fa-whatsapp"></i> Reserve a Table
+          </a>
+        </li>
+      </ul>
+
+      <a href="#cta" class="nav-cta-btn">Reserve a Table</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+
+  <!-- ══════ HERO ══════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+
+    <!-- Decorative corner lines -->
+    <div class="hero-corner hero-corner-tl"></div>
+    <div class="hero-corner hero-corner-br"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-aos="fade-down" data-aos-delay="100">
+        <span class="eyebrow-line"></span> Est. 2018 · Fine Dining · Mumbai <span class="eyebrow-line"></span>
+      </p>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+        Experience Taste<br /><em>Like Never Before</em>
+      </h1>
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="350">
+        A symphony of flavours crafted by world-class chefs,<br class="hide-mobile" />
+        served in an atmosphere of timeless elegance.
+      </p>
+      <div class="hero-btns" data-aos="fade-up" data-aos-delay="500">
+        <a href="#menu" class="btn btn-gold">
+          <i class="fas fa-utensils"></i> Explore Menu
+        </a>
+        <a href="#cta" class="btn btn-outline">
+          <i class="far fa-calendar-alt"></i> Book a Table
+        </a>
+      </div>
+
+      <!-- floating badges -->
+      <div class="hero-badges" data-aos="fade-up" data-aos-delay="650">
+        <div class="hero-badge"><i class="fas fa-star"></i> 3 Michelin Stars</div>
+        <div class="hero-badge-divider"></div>
+        <div class="hero-badge"><i class="fas fa-award"></i> Best Restaurant Mumbai 2024</div>
+        <div class="hero-badge-divider"></div>
+        <div class="hero-badge"><i class="fas fa-leaf"></i> Farm to Table</div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ══════ MARQUEE STRIP ══════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>✦ Fine Dining</span>
+      <span>✦ Award Winning</span>
+      <span>✦ Premium Ingredients</span>
+      <span>✦ Expert Chefs</span>
+      <span>✦ Live Music</span>
+      <span>✦ Private Events</span>
+      <span>✦ Michelin Starred</span>
+      <span>✦ Sommelier Service</span>
+      <span>✦ Fine Dining</span>
+      <span>✦ Award Winning</span>
+      <span>✦ Premium Ingredients</span>
+      <span>✦ Expert Chefs</span>
+      <span>✦ Live Music</span>
+      <span>✦ Private Events</span>
+      <span>✦ Michelin Starred</span>
+      <span>✦ Sommelier Service</span>
+    </div>
+  </div>
+
+
+  <!-- ══════ FEATURED DISHES ══════ -->
+  <section class="section dishes-section" id="menu">
+    <div class="container">
+
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Our Specialties</p>
+        <h2 class="section-title">Featured <em>Dishes</em></h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="dishes-grid">
+
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="dish-img-wrap">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80" alt="Wagyu Steak" loading="lazy" />
+            <span class="dish-badge">Chef's Pick</span>
+            <div class="dish-shimmer"></div>
+          </div>
+          <div class="dish-info">
+            <h3>Wagyu Ribeye Steak</h3>
+            <p>A5 Wagyu, truffle butter, roasted bone marrow, micro herbs</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹10,999</span>
+              <button class="dish-btn" aria-label="Add to order"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="dish-img-wrap">
+            <img src="https://images.unsplash.com/photo-1533産食物-1504674900247-0877df9cc836?w=600&q=80"
+                 onerror="this.src='https://images.unsplash.com/photo-1559410545-0bdcd187e0a6?w=600&q=80'"
+                 alt="Lobster Thermidor" loading="lazy" />
+          </div>
+          <div class="dish-info">
+            <h3>Lobster Thermidor</h3>
+            <p>Whole Maine lobster, cognac cream sauce, gruyère crust</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹7,999</span>
+              <button class="dish-btn" aria-label="Add to order"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="dish-img-wrap">
+            <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&q=80" alt="Truffle Pasta" loading="lazy" />
+            <span class="dish-badge">Popular</span>
+            <div class="dish-shimmer"></div>
+          </div>
+          <div class="dish-info">
+            <h3>Black Truffle Tagliatelle</h3>
+            <p>Hand-rolled pasta, fresh black truffle, Parmesan foam</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹5,999</span>
+              <button class="dish-btn" aria-label="Add to order"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="dish-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=600&q=80" alt="Salmon" loading="lazy" />
+          </div>
+          <div class="dish-info">
+            <h3>Pan-Seared Salmon</h3>
+            <p>Atlantic salmon, saffron beurre blanc, caperberries, dill oil</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹4,999</span>
+              <button class="dish-btn" aria-label="Add to order"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="dish-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&q=80" alt="Soufflé" loading="lazy" />
+          </div>
+          <div class="dish-info">
+            <h3>Gold Leaf Soufflé</h3>
+            <p>Grand Marnier chocolate soufflé, Tahitian vanilla ice cream</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹2,999</span>
+              <button class="dish-btn" aria-label="Add to order"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="dish-img-wrap">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Tasting Menu" loading="lazy" />
+            <span class="dish-badge">New</span>
+            <div class="dish-shimmer"></div>
+          </div>
+          <div class="dish-info">
+            <h3>Tasting Menu</h3>
+            <p>7-course curated journey through seasonal ingredients</p>
+            <div class="dish-footer">
+              <span class="dish-price">₹15,999</span>
+              <button class="dish-btn" aria-label="Add to order"><i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="center-btn" data-aos="fade-up">
+        <a href="#" class="btn btn-gold-outline">
+          <i class="fas fa-book-open"></i> View Full Menu
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════ ABOUT ══════ -->
+  <section class="section about-section" id="about">
+    <div class="container about-grid">
+
+      <div class="about-img-col" data-aos="fade-right" data-aos-duration="900">
+        <div class="about-img-frame">
+          <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=700&q=80" alt="Our Chef" />
+        </div>
+        <div class="about-img-accent"></div>
+        <div class="about-stat-card" data-aos="zoom-in" data-aos-delay="400">
+          <span class="stat-num">17+</span>
+          <span class="stat-label">Years of Excellence</span>
+        </div>
+        <!-- Second floating card -->
+        <div class="about-award-card" data-aos="zoom-in" data-aos-delay="550">
+          <i class="fas fa-medal"></i>
+          <span>Michelin ★★★</span>
+        </div>
+      </div>
+
+      <div class="about-text-col" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+        <p class="section-eyebrow">Our Story</p>
+        <h2 class="section-title">Crafted With<br /><em>Passion &amp; Precision</em></h2>
+        <div class="title-line"></div>
+        <p class="about-body">
+          AURUM was born from a singular obsession: to create dining experiences that transcend the ordinary.
+          Founded in 2018 by Michelin-starred Chef Elara Voss, our kitchen is a laboratory of flavour — where
+          classical French technique meets the boldest global inspiration.
+        </p>
+        <p class="about-body">
+          Every plate is a canvas. Every ingredient is sourced from the finest artisan producers across four
+          continents. We believe that exceptional food is not merely sustenance — it is memory, emotion, and art.
+        </p>
+        <div class="about-badges">
+          <div class="badge"><i class="fas fa-star"></i> Michelin Star 2022–24</div>
+          <div class="badge"><i class="fas fa-award"></i> Best Fine Dining 2023</div>
+          <div class="badge"><i class="fas fa-leaf"></i> Sustainable Kitchen</div>
+        </div>
+        <a href="#cta" class="btn btn-gold" style="margin-top:2rem;">
+          <i class="far fa-calendar-check"></i> Reserve a Table
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════ PARALLAX DIVIDER ══════ -->
+  <div class="parallax-divider">
+    <div class="parallax-divider-bg"></div>
+    <div class="parallax-divider-overlay"></div>
+    <div class="parallax-divider-content" data-aos="fade-up">
+      <blockquote>
+        "Good food is the foundation of<br />
+        <span>genuine happiness.</span>"
+        <cite>— Auguste Escoffier</cite>
+      </blockquote>
+    </div>
+  </div>
+
+
+  <!-- ══════ WHY CHOOSE US ══════ -->
+  <section class="section why-section">
+    <div class="container">
+
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">The AURUM Promise</p>
+        <h2 class="section-title">Why Choose <em>Us</em></h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="why-icon-wrap"><i class="fas fa-leaf"></i></div>
+          <h3>Seasonal &amp; Fresh</h3>
+          <p>Our menus change with the seasons. Every ingredient is hand-selected at peak ripeness from trusted local and global farms.</p>
+        </div>
+
+        <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="why-icon-wrap"><i class="fas fa-wine-glass-alt"></i></div>
+          <h3>World-Class Chefs</h3>
+          <p>Our brigade has trained in Paris, Tokyo, and Dubai — bringing extraordinary depth of craft to every single dish.</p>
+        </div>
+
+        <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="why-icon-wrap"><i class="fas fa-wine-glass-alt"></i></div>
+          <h3>Curated Wine Cellar</h3>
+          <p>Over 400 labels spanning five continents, personally curated by our sommelier to complement every flavour profile.</p>
+        </div>
+
+        <div class="why-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="why-icon-wrap"><i class="fas fa-concierge-bell"></i></div>
+          <h3>Impeccable Service</h3>
+          <p>From the moment you arrive to the final goodbye, our team anticipates your every need with warmth and discretion.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════ NUMBERS ══════ -->
+  <section class="numbers-section">
+    <div class="container numbers-grid">
+
+      <div class="number-item" data-aos="zoom-in" data-aos-delay="100">
+        <span class="number" data-target="12500">0</span><span class="number-suffix">+</span>
+        <p>Happy Guests</p>
+      </div>
+
+      <div class="number-item" data-aos="zoom-in" data-aos-delay="200">
+        <span class="number" data-target="48">0</span><span class="number-suffix"></span>
+        <p>Signature Dishes</p>
+      </div>
+
+      <div class="number-item" data-aos="zoom-in" data-aos-delay="300">
+        <span class="number" data-target="3">0</span><span class="number-suffix">★</span>
+        <p>Michelin Stars</p>
+      </div>
+
+      <div class="number-item" data-aos="zoom-in" data-aos-delay="400">
+        <span class="number" data-target="17">0</span><span class="number-suffix">+</span>
+        <p>Years of Excellence</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════ TESTIMONIALS ══════ -->
+  <section class="section testimonials-section">
+    <div class="container">
+
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">What Guests Say</p>
+        <h2 class="section-title">Voices of <em>Delight</em></h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testi-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-text">"AURUM redefined what fine dining means for me. The truffle tagliatelle was transcendental — I still dream about it."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" alt="James R." />
+            </div>
+            <div>
+              <strong>James R.</strong>
+              <span>Food Critic, The Times</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card testi-featured" data-aos="fade-up" data-aos-delay="200">
+          <div class="testi-quote-mark">"</div>
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-text">"Not just a meal, but a memory. The 7-course tasting menu took us on a journey around the world without leaving our seats."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" alt="Sophie M." />
+            </div>
+            <div>
+              <strong>Sophie M.</strong>
+              <span>Lifestyle Blogger</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="testi-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testi-text">"The service alone is worth the visit. Every detail was attended to with a grace that is rare. AURUM is truly world-class."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=80" alt="David K." />
+            </div>
+            <div>
+              <strong>David K.</strong>
+              <span>CEO, Manhattan Group</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════ GALLERY ══════ -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-eyebrow">Visual Stories</p>
+        <h2 class="section-title">Gallery <em>Glimpses</em></h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item gallery-tall" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80" alt="Restaurant interior" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Interior</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Gourmet dish" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Gourmet</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&q=80" alt="Wine cellar" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Wine Cellar</span>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-wide" data-aos="fade-up" data-aos-delay="250">
+          <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=900&q=80" alt="Table setting" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Table Setting</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Grilled food" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand-alt"></i>
+            <span>Grilled</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════ CTA ══════ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-bg"></div>
+    <div class="cta-overlay"></div>
+    <!-- animated gold orbs -->
+    <div class="cta-orb cta-orb-1"></div>
+    <div class="cta-orb cta-orb-2"></div>
+    <div class="cta-content" data-aos="zoom-in">
+      <p class="section-eyebrow" style="color:var(--gold-light);">Limited Seatings Available</p>
+      <h2 class="cta-title">Book Your Table <em>Now</em></h2>
+      <p class="cta-sub">An unforgettable evening awaits. Join us for an extraordinary culinary journey.</p>
+
+      <!-- reservation mini-form -->
+      <div class="cta-form" data-aos="fade-up" data-aos-delay="200">
+        <div class="cta-form-row">
+          <div class="cta-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Your Name" />
+          </div>
+          <div class="cta-field">
+            <i class="fas fa-users"></i>
+            <select>
+              <option value="">Guests</option>
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3–4 Guests</option>
+              <option>5+ Guests</option>
+            </select>
+          </div>
+          <div class="cta-field">
+            <i class="fas fa-calendar"></i>
+            <input type="date" />
+          </div>
+          <button class="btn btn-gold cta-submit-btn" id="reserveNowBtn">Reserve Now</button>
+        </div>
+      </div>
+
+      <div class="cta-btns" style="margin-top:2rem;">
+        <a href="https://wa.me/919149461230?text=Hello%2C%20I'd%20like%20to%20reserve%20a%20table%20at%20AURUM." target="_blank" class="btn btn-outline-white">
+          <i class="fab fa-whatsapp"></i> Call to Reserve
+        </a>
+        <a href="/cdn-cgi/l/email-protection#e68f9493d6d0d4d6d6d2a6818b878f8ac885898b" class="btn btn-outline-white">
+          <i class="fas fa-envelope"></i> Email Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="footer" id="contact">
+
+    <div class="footer-top">
+      <div class="container footer-grid">
+
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <svg class="logo-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="18,2 34,32 2,32" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+              <polygon points="18,10 28,28 8,28" fill="#c9a84c" opacity="0.25"/>
+            </svg>
+            <span>AURUM</span>
+          </a>
+          <p class="footer-tagline">Where every meal is a masterpiece.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="#menu"><i class="fas fa-chevron-right"></i> Menu</a></li>
+            <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+            <li><a href="#cta"><i class="fas fa-chevron-right"></i> Reservations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <ul class="hours-list">
+            <li><span>Mon – Thu</span><span>5:00 PM – 11:00 PM</span></li>
+            <li><span>Fri – Sat</span><span>5:00 PM – 1:00 AM</span></li>
+            <li><span>Sunday</span><span>4:00 PM – 10:00 PM</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              14 Golden Avenue , jammu
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="https://wa.me/919149461230" target="_blank" style="color:inherit;">+91 9149461230</a>
+            </li>
+            <li>
+              <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+              <a href="https://wa.me/919149461230?text=Hello%2C%20I'd%20like%20to%20reserve%20a%20table%20at%20AURUM." target="_blank" style="color:var(--gold-light);">WhatsApp Us</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="/cdn-cgi/l/email-protection#d6bfa4a3e6e0e4e6e6e296b1bbb7bfbaf8b5b9bb" style="color:var(--gold-light);"><span class="__cf_email__" data-cfemail="97fee5e2a7a1a5a7a7a3d7f0faf6fefbb9f4f8fa">[email&#160;protected]</span></a>
+            </li>
+          </ul>
+          <!-- Google Maps mini embed placeholder -->
+          <div class="footer-map">
+            <img src="https://images.unsplash.com/photo-1495562569060-2eec283d3391?w=400&q=60" alt="Location map" loading="lazy" />
+            <a href="https://maps.google.com" target="_blank" class="map-pin-btn">
+              <i class="fas fa-map-pin"></i> Get Directions
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 AURUM Fine Dining. All rights reserved.</p>
+        <p>designed and developed by iruvantika <i class="fas fa-heart" style="color:var(--gold);"></i> for extraordinary experiences.</p>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- ══════ LIGHTBOX ══════ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">
+      <i class="fas fa-times"></i>
+    </button>
+    <img src="" alt="Gallery image" id="lightboxImg" />
+  </div>
+
+  <!-- ══════ CART WIDGET ══════ -->
+  <div class="cart-widget" id="cartWidget">
+    <button class="cart-btn" id="cartToggle">
+      <i class="fas fa-shopping-bag"></i>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <div class="cart-dropdown" id="cartDropdown">
+      <div class="cart-header">
+        <span>Your Order</span>
+        <button id="cartClear" title="Clear order"><i class="fas fa-trash-alt"></i></button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <p class="cart-empty">Your order is empty</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          Total: <strong id="cartTotal">₹0</strong>
+        </div>
+        <a href="#cta" class="btn btn-gold btn-sm" id="cartCheckout">Reserve & Order</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ RESERVATION SUCCESS MODAL ══════ -->
+  <div class="reservation-modal" id="reservationModal">
+    <div class="reservation-modal-box">
+      <div class="reservation-modal-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h3>Reservation Confirmed!</h3>
+      <p>Thank you for choosing <strong>AURUM</strong>. Your table has been reserved. We'll reach out to confirm your booking shortly. We look forward to an extraordinary evening with you.</p>
+      <div class="reservation-modal-details" id="reservationDetails"></div>
+      <button class="btn btn-gold" id="reservationModalClose">
+        <i class="fas fa-utensils"></i> Perfect, See You Soon
+      
+      </button>
+    </div>
+  </div>
+
+ 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
